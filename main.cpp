@@ -6,36 +6,25 @@ int main()
 {
     setlocale(0,"Rus");
 
+    string s;
+
     cout << "Введите число:" << endl;
 
-    long long a, b;
-    int i = 0;
+    cin >> s;
 
-    cin >> a;
+    n =  s.length();
 
-    b = a;
+    cout << "Число разрядов:" << n << endl;
 
-    while (a>0){
-        a = a/10;
-        i++;
-        }
-    
-    cout << "Число разрядов:" << i << endl;
+    int* arr = new int [n];
 
-    int* arr = new int [i];
-
-    int j = i-1;
-
-    while (b>0){
-        arr[j] = b%10;
-        b = b/10;
-        j--;
-    }
+    for ( int i = 0; i < n ; i++)
+        arr[i] = s[i]-48;
 
     cout << "Масcив цифр:" << endl;
 
-    for (j=0; j < i; j++ )
-        cout << arr[j] << " ";
+    for ( int i=0; i < n; i++ )
+        cout << arr[i] << " ";
 
     return 0;
 }
