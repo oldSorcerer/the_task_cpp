@@ -19,6 +19,7 @@ int main()
         a = a/10;
         i++;
         }
+    
     cout << "Число разрядов:" << i << endl;
 
     int* arr = new int [i];
